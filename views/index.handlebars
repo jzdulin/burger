@@ -2,15 +2,17 @@
 
 <div class="container">
 
-    {{#each data}} {{#unless this.devoured}}
-        <div>
-            {{this.id}}. {{this.burger_name}}
-        </div>
+    {{#each data}} 
+        {{#unless this.devoured}}
+            <div>
+                {{this.id}}. {{this.burger_name}}
+            </div>
 
-        <form>
-            <button type="submit" class="btn"> DEVOUR IT</button>
-        </form>
-    {{/unless}} {{/each}}
+            <form>
+                <button type="submit" class="btn"> DEVOUR IT</button>
+            </form>
+        {{/unless}} 
+    {{/each}}
 
     <h2>Add a Burger</h2>
     <form class="create-form">
@@ -22,10 +24,12 @@
 
         <button type="submit">Add Burger</button>
 
-        {{#each data}} {{#if this.devoured}}
-            <div>
-                {{this.id}}. {{this.burger_name}}
-            </div>
-        {{/if}} {{/each}}
+        {{#each data}} 
+            {{#if this.devoured}}
+                <div>
+                    {{this.id}}. {{this.burger_name}}
+                </div>
+            {{/if}} 
+        {{/each}}
 
 </div>
